@@ -1,38 +1,396 @@
-.App {
+.App{
+  margin-bottom: 20px;;
+
+}
+
+/* nav bar */
+.navbar{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-items{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+}
+.nav-items li {
+  padding: 12px 15px 10px 15px;
+ 
+  font-weight: 550;
+}
+
+.brand-name{
+  margin-left:-25px;
+}
+
+.search-btn{
+  margin-top:15px;
+}
+
+
+/* heading */
+.heading{
+  padding-top:60px;
   text-align: center;
+  width:90%;
+  margin:auto;
+  font-family: 'Alata', sans-serif;
+}
+.heading h1 {
+  font-weight: 600;
+}
+.heading h5{
+  width:60%;
+  margin:auto;
+  margin-top:25px;
+  line-height:1.5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* contain */
+.contain{
+  width:77%;
+  margin:auto;
+  margin-top: 60px;
+}
+/* main contain */
+.main-contain{
+  
+  display: grid;
+  grid-template-columns:1.6fr 1fr 1fr ;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* left grid */
+.left-grid{
+  padding:40px;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to right,#e6f5ff,white);
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-grid-btn{
+  background-color: red;
+  color:white;
+  padding:5px ;
+  border:none;
+  
+  font-size:13px;
+  font-family: 'Alata', sans-serif;
+  width:40%;
+ 
+}
+.left-grid-rightside{
+  padding:40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.left-grid-rightside p{
+  width:70%;
+  
+}
+/* right grid */
+.right-grid{
+  border:1px solid hsl(0, 0%, 97%);
+  padding:30px;
+  padding-bottom: 70px;
+  padding-left:40px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+.main-contain div:nth-child(2),.main-contain div:nth-child(3){
+  border-top: none;
+}
+.main-contain div:nth-child(3),.main-contain div:nth-child(5){
+  border-right: none;
+}
+.main-contain div:nth-child(4),.main-contain div:nth-child(5){
+  border-bottom: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.right-grid-p{
+  font-size:13px ;
+}
+.right-grid-btn{
+  font-size: 12px;
+  padding:5px;
+  background-color: white;
+  color:#0099ff;
+  border:1px solid #0099ff
+
+}
+.right-grid-rightside{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -5px;
+  padding-left: 20px;
+}
+
+
+
+@media only screen and (max-width:1258px){
+  .contain{
+    width: 85%;
   }
-  to {
-    transform: rotate(360deg);
+
+
+}
+@media only screen and (max-width:1158px){
+  .contain{
+    width: 90%;
   }
+
+
+}
+
+
+
+@media only screen and (max-width:1024px){
+  .contain{
+    width:95%;
+  }
+  
+  /* left grid */
+  .left-grid{
+    justify-content: space-around;
+  }
+ 
+  .left-grid{
+    padding:20px;
+  }
+  .left-grid-rightside{
+    padding:40px;
+    width: 100%;
+    margin:auto;
+  }
+  .left-grid-rightside p{
+    width: 100%;
+  }
+  /* right grid */
+  .right-grid{
+    padding:40px;
+    padding-bottom: 50px;
+  }
+
+}
+
+
+
+
+
+
+@media only screen and (max-width:992px){
+  .navbar{
+    width:100%;
+    flex-direction: column-reverse;
+  }
+
+  .contain{
+    width:75%;
+  }
+  .heading {
+    width:80%;
+  }
+  .heading h5{
+    width:100%;
+  }
+
+  /* main contain */
+  .main-contain{
+    
+    grid-template-columns:2fr ;
+    grid-template-rows: 2fr;
+  }
+  /* left grid */
+  .left-grid{
+    
+    padding-bottom:120px;
+    grid-column: 1/3;
+    background-image: linear-gradient(to bottom,#e6faff,white);
+  }
+ /* right grid */
+  .right-grid{
+    padding:30px;
+    padding-bottom: 30px;
+    
+  }
+  .right-grid-rightside{
+    padding-left: 40px;
+  }
+  .right-grid-btn{
+    width:80%;
+    font-size: 11px;
+    padding:3px;
+  }
+
+
+}
+
+@media only screen and (max-width:767px){
+  
+  .nav-items{
+    justify-content: space-around;
+  }
+  .nav-items li {
+    font-weight: 450;
+    font-size: 14px;
+    padding:10px;
+    
+  }
+  .contain{
+    width: 80%;
+   
+  }
+
+  .heading h5{
+    width:90%;
+  }
+  /* main contain */
+  .main-contain{
+    width : 100%;
+    margin: auto;
+   
+    grid-template-columns: 4fr ;
+    
+  }
+
+
+  /* left grid */
+  .left-grid{
+    grid-column:1/5;
+    flex-direction: column;
+  }
+  .left-grid-rightside{
+    text-align: center;
+  }
+  .left-grid-btn{
+    width:40%;
+    margin: auto;
+  }
+
+
+  /* right grid */
+  .right-grid{
+   
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-grid-p{
+    display: none;
+  }
+  .right-grid-rightside{
+    text-align: center;
+    padding:0px;
+  }
+  .right-grid-rightside h5 {
+    padding-top: 10px;
+    font-size: 15px;
+  }
+  .right-grid-btn{
+ 
+    font-size:10px;
+    font-weight: 500;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding:0px;
+    background-color: white;
+    color:#0099ff;
+    border:none;
+    border-bottom:1px solid #0099ff
+  
+  }
+  
+
+}
+
+@media only screen and (max-width:600px){
+  .main-contain{
+    grid-template-columns: 2fr ;
+
+  }
+
+  /* left grid */
+  .left-grid{
+    grid-column: 1/3;
+    padding:10px;
+    padding-bottom:60px;
+
+  }
+  .left-grid-btn{
+    width:60%;
+    margin: auto;
+  }
+  /* right grid */
+  .right-grid{
+    padding:60px;
+  }
+ 
+  .hide-in-mobile{
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width:460px){
+  .contain{
+    width: 90%;
+  }
+
+  /* heading */
+  .heading h1 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .heading h5 {
+    font-size: 15px;
+  }
+
+
+  /* right grid */
+  .right-grid{
+    padding:40px;
+  }
+  .right-grid-btn{
+    width:100%;
+    margin:auto;
+  }
+  .search-btn{
+    margin-top:12px;
+  }
+  
+
+
+
+}
+
+@media only screen and (max-width:325px){
+  .nav-items li{
+    font-size: 11px;
+  }
+  .search-btn{
+    margin-top:10px;
+  }
+  /* right grid */
+  .right-grid{
+    padding:25px;
+  }
+  
+  
+
 }
