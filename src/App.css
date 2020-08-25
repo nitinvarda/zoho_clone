@@ -314,6 +314,9 @@
     border-bottom:1px solid #0099ff
   
   }
+  .search-btn{
+    margin-top:11px;
+  }
   
 
 }
@@ -344,6 +347,8 @@
     display: none;
   }
 
+
+
 }
 
 
@@ -370,9 +375,7 @@
     width:100%;
     margin:auto;
   }
-  .search-btn{
-    margin-top:12px;
-  }
+ 
   
 
 
@@ -382,17 +385,16 @@
   .nav-items li{
     font-size: 11px;
   }
+  .search-btn{
+    margin-top:8px;
+  }
 
 
 }
 
 @media only screen and (max-width:325px){
-  .nav-items li{
-    font-size: 11px;
-  }
-  .search-btn{
-    margin-top:10px;
-  }
+ 
+ 
   /* right grid */
   .right-grid{
     padding:25px;
